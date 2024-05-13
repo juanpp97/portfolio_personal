@@ -1,0 +1,33 @@
+---
+
+---
+
+<nav class="header__nav">
+    <a href="" class="nav__link active">Experiencia</a>
+    <a href="" class="nav__link">Tecnologías</a>
+    <a href="" class="nav__link">Proyectos</a>
+    <a href="" class="nav__link">Sobre mí</a>
+</nav>
+<style>
+    .header__nav {
+        background-color: var(--bg-pill-90);
+        border-radius: 20px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 2rem;
+    }
+    .nav__link {
+        color: var(--color-link);
+        transition: color 200ms ease;
+    }
+    .active, .nav__link:hover {
+        color: var(--color-important);
+    }
+    @media screen and (max-width: 768px) {
+        .header__nav{
+            gap: 1.5rem;
+        }
+    }
+</style>

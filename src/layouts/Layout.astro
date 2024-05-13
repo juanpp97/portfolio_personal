@@ -1,0 +1,110 @@
+---
+import '@fontsource-variable/signika';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+
+
+	:root, :root[data-theme="light"]{
+		--bg-gradient: radial-gradient(
+			ellipse 80% 80% at 50% 110%,
+			rgba(240, 240, 242, 0.5) 0%,
+			rgba(230, 230, 232, 0.7) 20%,
+			rgba(220, 220, 222, 0.9) 40%,
+			rgba(210, 210, 212, 0.95) 60%,
+			rgba(200, 200, 202, 1) 80%,
+			rgba(190, 190, 192, 1) 100%
+			) no-repeat center / cover;
+			
+			--bg-color: rgb(241, 241, 243);
+			--bg-pill: rgb(217, 217, 217);
+			--bg-pill-25: rgba(217,217,217,0.25); 
+			--bg-pill-90: rgba(217,217,217,0.9);
+			--bg-header-btn: rgb(29, 132, 181);
+			--bg-toggle-btn: rgb(50,48,49);
+			--bg-link-30: rgb(34, 34, 34, 0.3);
+
+			--color-light: rgb(238, 238, 238);
+			--color-link: rgb(34, 34, 34);
+			--color-text: rgb(0, 0, 0);
+			--color-text-lighter: rgb(51, 51, 51);
+			--color-hightlight: rgb(221, 107, 0);
+			--color-important: rgb(33, 88, 138);
+			--color-headings: rgb(115, 115, 115);
+			
+			
+		}
+		:root[data-theme="dark"]{
+			--bg-gradient: radial-gradient(
+			ellipse 90% 70% at 50% 120%,
+			rgba(40, 40, 40, 0.3) 20%,
+			rgba(30, 30, 30, 0.3) 70%,
+			rgba(20, 20, 20, 0.3) 80%,
+			rgba(12, 12, 13) 100%
+			) no-repeat center / cover;
+	
+			--bg-color: #0D0D0E;
+			--bg-pill: #D9D9D9;
+			--bg-pill-25: rgba(217,217,217,0.25); 
+			--bg-pill-70: rgba(217,217,217,0.7);
+			--bg-header-btn: #1D84B5;
+			--color-light: #EEE;
+			--color-hightlight: #21588A;
+			
+		}
+		
+	body {
+		font-family: 'Signika Variable', sans-serif;
+		background: var(--bg-gradient);	
+		background-color: var(--bg-color);
+		font-weight: 300;
+		text-wrap: pretty;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		line-height: 1.3;
+	}
+	.hide{
+    display: none;
+	}	
+	@media screen and (min-width: 1200px) {
+		.container{
+				max-width: 1200px;
+		}
+		
+	}
+</style>

@@ -1,0 +1,101 @@
+---
+import SpainFlag from '@/components/icons/Spain.astro';
+import USAFlag from '@/components/icons/USA.astro';
+import Chevron from './icons/Chevron.astro';
+const chevronSize = {width: 25, height: 25};
+const chevronTransformation = 'transform: rotate(-90deg)';
+---
+
+<div class="header__language">
+    <SpainFlag/>
+    <p class="language__text">ES</p>
+    <Chevron width={chevronSize.width} height={chevronSize.height} transformation={chevronTransformation}/>
+    <div class="dropdown__language hide">
+        <ul class="dropdown__list">
+            <li>
+                <USAFlag/>
+                <p class="language__text">US</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.header__language{
+    position: relative;
+    background-color: var(--bg-pill);
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+.dropdown__language{
+    position: absolute;
+    background-color: var(--bg-pill);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+
+}
+
+.dropdown__list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.dropdown__list li:hover{
+    background-color: var(--bg-link-30);
+    border-radius: 0 0 20px 20px;
+
+}
+.language__text{
+    user-select: none;
+}
+@media screen and (max-width: 768px) {
+.language__text{
+    display: none;
+}
+.header__language{
+    padding: 5px;
+    gap: 0;
+}
+}
+</style>
+<script>
+    const selector = document.querySelector('.header__language');
+
+    const dropdown = document.querySelector('.dropdown__language');
+    selector?.addEventListener("click", toggleVisibility);
+
+    function closeDropdown(event: any): void{
+
+         if(dropdown?.classList.contains('hide') || event.target.matches('.header__language')) return;
+         selector.style.borderRadius = '20px'
+         dropdown?.classList.add('hide');
+         window.removeEventListener('click', closeDropdown)
+
+     }
+    function toggleVisibility(event: any): void{
+        event.stopPropagation();
+        if(dropdown?.classList.contains('hide')) {
+            this.style.borderRadius = '20px 20px 0 0'
+            window.addEventListener('click', closeDropdown);
+
+        }else{
+            this.style.borderRadius = '20px'
+        }
+        dropdown?.classList.toggle('hide');
+
+    }
+    
+
+</script>

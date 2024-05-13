@@ -1,0 +1,63 @@
+---
+import LanguageSelector from '@/components/LanguageSelector.astro';
+import Nav from '@/components/Nav.astro';
+
+---
+
+<header class="header container">
+    <LanguageSelector/>
+    <Nav/>
+    <a href="" class="header__link">Descargar CV</a>
+</header>
+
+<style>
+    .header{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .header__link{
+        background-color: var(--bg-header-btn);
+        color: var(--color-light);
+        padding: 5px 20px;
+        letter-spacing: .025rem;
+        border-radius: 20px;
+        font-weight: 600;
+        box-shadow: 0 4px 4px var(--color-important);
+        transition: background 200ms ease;
+    }
+    .header__link:hover{
+        background-color: var(--color-important);
+
+    }
+    
+    @media screen and (max-width: 768px) {
+        .header__link{
+        background-color: var(--bg-header-btn);
+        color: var(--color-light);
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        letter-spacing: 0;
+        
+    }
+    }
+</style>
+<script>
+    function positionNav(){
+        const nav = document.querySelector('.header__nav') as HTMLElement;
+        const header = (document.querySelector('.header') as HTMLElement)
+        const headerWidth = header?.clientWidth ?? 0;
+        const headerMargin = header?.offsetLeft ?? 0;
+        const idiomaWidth = (document.querySelector('.header__language') as HTMLElement)?.clientWidth ?? 0;
+        const linkWidth = (document.querySelector('.header__link') as HTMLElement)?.clientWidth ?? 0;
+        const leftMargin = (headerWidth - idiomaWidth - linkWidth - nav?.clientWidth ?? 0)/2;
+        nav.style.left = leftMargin + idiomaWidth + headerMargin + 'px';
+
+    }
+            
+    window.addEventListener('resize', positionNav);
+    window.addEventListener('load', positionNav);
+</script>
