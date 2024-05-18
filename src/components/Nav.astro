@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
     <a href="" class="nav__link">Tecnologías</a>
     <a href="" class="nav__link">Proyectos</a>
     <a href="" class="nav__link">Sobre mí</a>
-    <ThemeToggle/>
+    <a href="" class="nav__link cv">Descargar CV</a>
 </nav>
 <style>
     .header__nav {
@@ -25,6 +25,10 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
     }
     .active, .nav__link:hover {
         color: var(--color-important);
+    }
+    .cv{
+        color: var(--color-highlight);
+        font-weight: 500;
     }
     @media screen and (max-width: 900px) {
         .header__nav{
