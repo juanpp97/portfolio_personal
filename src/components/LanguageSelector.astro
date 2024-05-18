@@ -71,9 +71,9 @@ const chevronTransformation = 'transform: rotate(-90deg)';
 }
 </style>
 <script>
-    const selector = document.querySelector('.header__language');
+    const selector = document.querySelector('.header__language') as HTMLElement;
 
-    const dropdown = document.querySelector('.dropdown__language');
+    const dropdown = document.querySelector('.dropdown__language') as HTMLElement;
     selector?.addEventListener("click", toggleVisibility);
 
     function closeDropdown(event: any): void{
@@ -87,11 +87,11 @@ const chevronTransformation = 'transform: rotate(-90deg)';
     function toggleVisibility(event: any): void{
         event.stopPropagation();
         if(dropdown?.classList.contains('hide')) {
-            this.style.borderRadius = '20px 20px 0 0'
+            (event.currentTarget as HTMLElement).style.borderRadius = '20px 20px 0 0'
             window.addEventListener('click', closeDropdown);
 
         }else{
-            this.style.borderRadius = '20px'
+            (event.currentTarget as HTMLElement).style.borderRadius = '20px'
         }
         dropdown?.classList.toggle('hide');
 
