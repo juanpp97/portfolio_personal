@@ -37,9 +37,11 @@ import MenuIcon from "@/components/icons/Menu.astro";
         background-color: var(--bg-language);
         top: 100%;
         left: 0;
+        max-height: 0;
         display: none;
-
         border-radius: 0 0 20px 20px;
+        overflow: hidden;
+        transition: all 300ms ease;
     }
     .dropdown__link {
         padding: 1rem 0;
@@ -117,17 +119,26 @@ import MenuIcon from "@/components/icons/Menu.astro";
         window.removeEventListener("click", closeDropdown);
     }
     function toggleVisibility(event: any): void {
-        event.stopPropagation();
-        if (dropdown?.classList.contains("hide")) {
-            nav.style.borderRadius =
-                "20px 20px 0 0";
-                activeLink.style.visibility = "hidden";
-            window.addEventListener("click", closeDropdown);
-        } else {
-            nav.style.borderRadius = "20px";
-            activeLink.style.visibility = "visible";
+    event.stopPropagation();
+    if (dropdown?.classList.contains("hide")) {
+        dropdown?.classList.remove("hide");
 
-        }
-        dropdown?.classList.toggle("hide");
+        nav.style.borderRadius = "20px 20px 0 0";
+        activeLink.style.visibility = "hidden";
+        window.addEventListener("click", closeDropdown);
+        setTimeout(() => {
+            dropdown.style.maxHeight = "400px";
+        }, 1);
+    } else {
+        activeLink.style.visibility = "visible";
+        dropdown.style.maxHeight = "0px";
+        
+        setTimeout(() => {
+            dropdown?.classList.add("hide")
+            nav.style.borderRadius = "20px";
+        },300)
+
     }
+}
+
 </script>
