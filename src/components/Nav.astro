@@ -1,15 +1,49 @@
 ---
-import ThemeToggle from "@/components/ThemeToggle.astro"
+import MenuIcon from "@/components/icons/Menu.astro";
 ---
 
 <nav class="header__nav">
-    <a href="" class="nav__link active">Experiencia</a>
-    <a href="" class="nav__link">Tecnologías</a>
-    <a href="" class="nav__link">Proyectos</a>
-    <a href="" class="nav__link">Sobre mí</a>
+    <a href="#experience" class="nav__link active">Experiencia</a>
+    <a href="#projects" class="nav__link">Proyectos</a>
+    <a href="#tech" class="nav__link">Tecnologías</a>
+    <a href="#about" class="nav__link">Sobre mí</a>
     <a href="" class="nav__link cv">Descargar CV</a>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 nav__icon"
+    >
+        <MenuIcon />
+    </svg>
+    <ul class="nav__dropdown hide">
+        <li class="dropdown__link active">Experiencia</li>
+        <li class="dropdown__link">Proyectos</li>
+        <li class="dropdown__link">Tecnologías</li>
+        <li class="dropdown__link">Sobre mí</li>
+        <li class="dropdown__link cv">Descargar CV</li>
+    </ul>
 </nav>
 <style>
+    .nav__dropdown {
+        position: absolute;
+        width: 100%;
+        background-color: var(--bg-language);
+        top: 100%;
+        left: 0;
+        display: none;
+
+        border-radius: 0 0 20px 20px;
+    }
+    .dropdown__link {
+        padding: 1rem 0;
+    }
     .header__nav {
         background-color: var(--bg-pill-90);
         border-radius: 20px;
@@ -18,21 +52,82 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
         align-items: center;
         padding: 10px 20px;
         gap: 2rem;
+        min-width: 150px;
     }
-    .nav__link {
+    .nav__link,
+    .dropdown__link {
         color: var(--color-link);
         transition: color 200ms ease;
+        user-select: none;
     }
-    .active, .nav__link:hover {
+    .active,
+    .nav__link:hover {
         color: var(--color-important);
     }
-    .cv{
+    .cv {
         color: var(--color-highlight);
         font-weight: 500;
     }
+    .nav__icon {
+        display: none;
+    }
+    svg {
+        stroke: var(--color-text);
+        fill: var(--color-text);
+    }
     @media screen and (max-width: 900px) {
-        .header__nav{
+        .header__nav {
             gap: 1.5rem;
         }
     }
+    @media screen and (max-width: 767px) {
+        .nav__dropdown {
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+            }
+        .nav__link:not(.active) {
+            display: none;
+        }
+        .nav__icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
 </style>
+<script>
+    const icon = document.querySelector(".nav__icon") as HTMLElement;
+    const nav = document.querySelector(".header__nav") as HTMLElement;
+    const dropdown = document.querySelector(".nav__dropdown") as HTMLElement;
+    const activeLink = document.querySelector(".nav__link.active") as HTMLElement;
+
+    icon?.addEventListener("click", toggleVisibility);
+
+    function closeDropdown(event: any): void {
+        if (
+            dropdown?.classList.contains("hide") ||
+            event.target.matches(".header__nav")
+        )
+            return;
+        nav.style.borderRadius = "20px";
+        dropdown?.classList.add("hide");
+        activeLink.style.visibility = "visible";
+
+        window.removeEventListener("click", closeDropdown);
+    }
+    function toggleVisibility(event: any): void {
+        event.stopPropagation();
+        if (dropdown?.classList.contains("hide")) {
+            nav.style.borderRadius =
+                "20px 20px 0 0";
+                activeLink.style.visibility = "hidden";
+            window.addEventListener("click", closeDropdown);
+        } else {
+            nav.style.borderRadius = "20px";
+            activeLink.style.visibility = "visible";
+
+        }
+        dropdown?.classList.toggle("hide");
+    }
+</script>

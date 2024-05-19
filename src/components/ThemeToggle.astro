@@ -3,11 +3,12 @@
 ---
 
 <label class:list={["switch", "toggle"]}>
+    <label for="mode"></label>
     <input type="checkbox" id="mode" />
     <span class="slider round"></span>
     <svg
-        width="16px"
-        height="16px"
+        width="18px"
+        height="18px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         id="theme"
@@ -32,6 +33,7 @@
         display: inline-block;
         width: 50px;
         height: 25px;
+        cursor: pointer;
     }
 
     .switch input {
@@ -83,7 +85,7 @@
     }
     svg{
         position: absolute;
-        top: 4px;
+        top: 3px;
     }
     :root[data-theme="light"] svg {
         right: 4px;
