@@ -1,13 +1,17 @@
 ---
 import MenuIcon from "@/components/icons/Menu.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <nav class="header__nav">
-    <a href="#experience" class="nav__link active">Experiencia</a>
-    <a href="#projects" class="nav__link">Proyectos</a>
-    <a href="#tech" class="nav__link">Tecnologías</a>
-    <a href="#about" class="nav__link">Sobre mí</a>
-    <a href="" class="nav__link cv">Descargar CV</a>
+    <a href="#experience" class="nav__link active">{t('nav.experience')}</a>
+    <a href="#projects" class="nav__link">{t('nav.projects')}</a>
+    <a href="#tech" class="nav__link">{t('nav.tech')}</a>
+    <a href="#about" class="nav__link">{t('nav.about')}</a>
+    <a href="" class="nav__link cv">{t('nav.resume')}</a>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -23,11 +27,11 @@ import MenuIcon from "@/components/icons/Menu.astro";
         <MenuIcon />
     </svg>
     <ul class="nav__dropdown hide">
-        <li class="dropdown__link active">Experiencia</li>
-        <li class="dropdown__link">Proyectos</li>
-        <li class="dropdown__link">Tecnologías</li>
-        <li class="dropdown__link">Sobre mí</li>
-        <li class="dropdown__link cv">Descargar CV</li>
+        <li class="dropdown__link active">{t('nav.experience')}</li>
+        <li class="dropdown__link">{t('nav.projects')}</li>
+        <li class="dropdown__link">{t('nav.tech')}</li>
+        <li class="dropdown__link">{t('nav.about')}</li>
+        <li class="dropdown__link cv">{t('nav.resume')}</li>
     </ul>
 </nav>
 <style>
@@ -45,6 +49,7 @@ import MenuIcon from "@/components/icons/Menu.astro";
     }
     .dropdown__link {
         padding: 1rem 0;
+        cursor: pointer;
     }
     .header__nav {
         background-color: var(--bg-pill-90);
@@ -63,7 +68,7 @@ import MenuIcon from "@/components/icons/Menu.astro";
         user-select: none;
     }
     .active,
-    .nav__link:hover {
+    .nav__link:hover, .dropdown__link:hover {
         color: var(--color-important);
     }
     .cv {

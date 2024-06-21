@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<Layout title={i18n.title}>
+	<Header/>
+	<main class="container">
+		{i18n.ejemplo}
+	</main>
+</Layout>
+<style>
+	main{
+		color: var(--color-text);
+		min-height: 100vh;
+	}
+</style>
