@@ -27,11 +27,11 @@ const t = useTranslations(lang);
         <MenuIcon />
     </svg>
     <ul class="nav__dropdown hide">
-        <li class="dropdown__link active">{t('nav.experience')}</li>
-        <li class="dropdown__link">{t('nav.projects')}</li>
-        <li class="dropdown__link">{t('nav.tech')}</li>
-        <li class="dropdown__link">{t('nav.about')}</li>
-        <li class="dropdown__link cv">{t('nav.resume')}</li>
+        <a href="#experience"><li class="dropdown__link active">{t('nav.experience')}</li></a>
+        <a href="#projects"><li class="dropdown__link">{t('nav.projects')}</li></a>
+        <a href="#tech"><li class="dropdown__link">{t('nav.tech')}</li></a>
+        <a href="#about"><li class="dropdown__link">{t('nav.about')}</li></a>
+        <a href=""><li class="dropdown__link cv">{t('nav.resume')}</li></a>
     </ul>
 </nav>
 <style>

@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import cara from "../assets/cara.webp";
+import Button from "@/components/HeroButton.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Mail from "@/components/icons/Mail.astro";
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<section id="experience">
+    <article class="hero">
+        <div class="presentation">
+            <h1 class="greet">{i18n.hero.greeting}</h1>
+            <h1 class="name">{i18n.hero.name}</h1>
+            <p class="specialty">{i18n.hero.specialty}</p>
+            <p class="description">
+                <strong>{i18n.hero.highlighted}</strong>
+                {i18n.hero.description}
+            </p>
+            <div class="social">
+                <Button href="https://github.com/juanpp97" text="Github">
+                    <GitHub/>
+                </Button>
+                <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
+                    <LinkedIn/>
+                </Button>
+                <Button href="mailto:juanpablopenaloza97@gmail.com" text="Contacto">
+                    <Mail/>
+                </Button>
+            </div>
+        </div>
+        <picture>
+            <Image src={cara} alt="Juan P. Peñaloza" class:list={["face"]} />
+        </picture>
+    </article>
+    <!-- Dispositivos Mobile -->
+    <p class="description">
+        <strong>{i18n.hero.highlighted}</strong>
+        {i18n.hero.description}
+    </p>
+    <div class="social">
+        <Button href="https://github.com/juanpp97" text="Github">
+            <GitHub/>
+        </Button>
+        <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
+            <LinkedIn/>
+        </Button>
+        <Button href="mailto:juanpablopenaloza97@gmail.com" text="Contacto">
+            <Mail/>
+        </Button>
+    </div>
+</section>
+
+<style>
+    
+    .hero {
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        padding: 40px 0px;
+    }
+    .presentation {
+        flex-basis: 600px;
+    }
+    .greet {
+        font-size: 30px;
+    }
+    .name {
+        font-size: 45px;
+        text-align: center;
+        color: var(--color-highlight);
+        text-shadow: 0 4px 4px var(--color-highlight30);
+        font-weight: 600;
+    }
+    .specialty {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .description {
+        font-size: 23px;
+        text-align: center;
+    }
+    strong {
+        color: var(--color-important);
+        font-weight: 400;
+    }
+    .face {
+        width: 100%;
+        height: 100%;
+        min-width: 170px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 144px;
+        border: 3px solid var(--color-important);
+    }
+    #experience > .social,
+    #experience > .description {
+        display: none;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        gap: 10%;
+    }
+    @media screen and (max-width: 700px) {
+        .hero {
+            align-items: center;
+        }
+        .presentation .description,
+        .presentation .social {
+            display: none;
+        }
+        #experience > .description {
+            display: block;
+        }
+        #experience > .social{
+            display: flex;
+            gap: 1rem;
+        }
+        .hero {
+            padding: 40px 20px;
+            padding-bottom: 10px;
+        }
+        .greet {
+            font-size: 25px;
+        }
+        .name {
+            font-size: 35px;
+        }
+        .specialty {
+            font-size: 30px;
+        }
+        .description {
+            font-size: 20px;
+        }
+        .face {
+            min-width: 130px;
+        }
+    }
+</style>

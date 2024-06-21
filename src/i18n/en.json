@@ -1,5 +1,10 @@
 {
     "title": "Juan P. Peñaloza | Backend Developer",
-
-    "ejemplo": "Hello, this is a sample test"
+    "hero": {
+        "greeting": "Hi, I am",
+        "name": "Juan Pablo Peñaloza",
+        "specialty": "Backend Developer",
+        "highlighted": "Electronic Engineer",
+        "description": "currently living in Argentina with wide experience on the development of versatile web applications."
+    }
 }

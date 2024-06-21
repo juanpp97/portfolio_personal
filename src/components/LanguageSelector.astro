@@ -26,7 +26,7 @@ const otherLanguages = Object.values(languages).filter(
                 otherLanguages.map((l) => {
                     return (
                         <a
-                            href={`/${l.code != languages['es'].code ? l.code.toLowerCase() : ""}`}
+                            href={`/${l.code != languages['es'].code ? l.code.toLowerCase() + '/' : ""}`}
                         >
                             <li>
                                 <l.flag />

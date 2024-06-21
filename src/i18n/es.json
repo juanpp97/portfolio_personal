@@ -1,4 +1,10 @@
 {
     "title": "Juan P. Peñaloza | Desarrollador Backend",
-    "ejemplo": "Hola, esto es un texto de ejemplo"
+    "hero": {
+        "greeting": "Hola, soy",
+        "name": "Juan Pablo Peñaloza",
+        "specialty": "Desarrollador Backend",
+        "highlighted": "Ingeniero electrónico",
+        "description": "radicado en Argentina con amplia experiencia en el desarrollo de aplicaciones web versátiles."
+    }
 }
