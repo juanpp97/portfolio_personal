@@ -14,10 +14,12 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
 
 <style>
     .header {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000; 
     }
     .header__link {
         background-color: var(--bg-header-btn);
@@ -40,7 +42,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
         }
     }
 </style>
-<script is:inline>
+<!-- <script is:inline>
     function positionNav() {
         const nav = document.querySelector(".header__nav");
         const header = document.querySelector(".header") ;
@@ -59,4 +61,4 @@ import ThemeToggle from "@/components/ThemeToggle.astro"
 
     window.addEventListener("resize", positionNav);
     positionNav();
-</script>
+</script> -->
