@@ -30,6 +30,8 @@ export const ui = {
     'nav.tech': 'Technologies',
     'nav.about': 'About me',
     'nav.resume': 'Download Resume',
+    'btn.contact': 'Contact',
+
   },
   es: {
     'nav.experience': 'Experiencia',
@@ -37,5 +39,6 @@ export const ui = {
     'nav.tech': 'Tecnologías',
     'nav.about': 'Sobre mi',
     'nav.resume': 'Descargar CV',
+    'btn.contact': 'Contacto',
   },
 } as const;

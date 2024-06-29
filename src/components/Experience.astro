@@ -1,0 +1,42 @@
+---
+import ExperienceCard from "@/components/ExperienceCard.astro";
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo_unsl.webp";
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<section id="experience">
+    <h1 class="experience__title">
+        {i18n.experience.title}
+    </h1>
+    <ExperienceCard title={i18n.experience.unsl.position}, date={i18n.experience.unsl.date}, place={i18n.experience.unsl.place}, description={i18n.experience.unsl.description}>
+        <Image
+        src={logo}
+        alt="Juan P. Peñaloza"
+        class:list={["logo"]}
+        loading="lazy"
+    />
+    </ExperienceCard>
+
+</section>
+
+<style>
+    #experience{
+        margin: 50px auto;
+    }
+    .experience__title{
+        text-align: center;
+        font-size: 2em;
+        color: var(--color-headings);
+        font-weight: 400;
+    }
+    .logo {
+        max-width: 130px;
+        max-height: 130px;
+        object-fit: cover;
+        object-position: center;
+    }
+</style>

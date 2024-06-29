@@ -5,13 +5,18 @@ import Button from "@/components/HeroButton.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
 import Mail from "@/components/icons/Mail.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const mailText = t('btn.contact');
 ---
 
-<section id="experience">
-    <article class="hero">
+<section class="hero">
+    <article class="hero__content">
         <div class="presentation">
             <h1 class="greet">{i18n.hero.greeting}</h1>
             <h1 class="name">{i18n.hero.name}</h1>
@@ -27,13 +32,13 @@ const i18n = getI18N({ currentLocale });
                 <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
                     <LinkedIn/>
                 </Button>
-                <Button href="mailto:juanpablopenaloza97@gmail.com" text="Contacto">
+                <Button href="mailto:juanpablopenaloza97@gmail.com" text={mailText}>
                     <Mail/>
                 </Button>
             </div>
         </div>
         <picture>
-            <Image src={cara} alt="Juan P. Peñaloza" class:list={["face"]} />
+            <Image src={cara} alt="Juan P. Peñaloza" class:list={["face"]}  loading="lazy"/>
         </picture>
     </article>
     <!-- Dispositivos Mobile -->
@@ -48,7 +53,7 @@ const i18n = getI18N({ currentLocale });
         <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
             <LinkedIn/>
         </Button>
-        <Button href="mailto:juanpablopenaloza97@gmail.com" text="Contacto">
+        <Button href="mailto:juanpablopenaloza97@gmail.com" text={t('btn.contact')}>
             <Mail/>
         </Button>
 
@@ -56,12 +61,15 @@ const i18n = getI18N({ currentLocale });
 </section>
 
 <style>
-    
-    .hero {
+    .hero{
+        margin: 20px auto;
+        
+
+    }
+    .hero__content {
         display: flex;
         justify-content: center;
         gap: 5%;
-        margin: 50px auto;
 
     }
     .presentation {
@@ -99,8 +107,8 @@ const i18n = getI18N({ currentLocale });
         border-radius: 144px;
         border: 3px solid var(--color-important);
     }
-    #experience > .social,
-    #experience > .description {
+    .hero > .social,
+    .hero > .description {
         display: none;
     }
     .social{
@@ -111,21 +119,21 @@ const i18n = getI18N({ currentLocale });
         gap: 10%;
     }
     @media screen and (max-width: 700px) {
-        .hero {
+        .hero__content {
             align-items: center;
         }
         .presentation .description,
         .presentation .social {
             display: none;
         }
-        #experience > .description {
+        .hero > .description {
             display: block;
         }
-        #experience > .social{
+        .hero > .social{
             display: flex;
             gap: 1rem;
         }
-        .hero {
+        .hero__content {
             margin-bottom: 10px;
         }
         .greet {
