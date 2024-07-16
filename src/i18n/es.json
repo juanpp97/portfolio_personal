@@ -19,7 +19,7 @@
     "projects": {
         "title": "Proyectos",
         "gallery": "Galería",
-
+        "load_more": "Cargar más",
         "detail": [
             {
                 "cover": "./portada_dsh.webp",
@@ -27,37 +27,27 @@
                 "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
                 "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
                 "images": [],
-                "github": "",
+                "github": "https://github.com/juanpp97/proyecto-django",
                 "deploy": ""
             },
             {
-                "cover": "./portada_dsh.webp",
-                "name": "Django Suites Hotel",
-                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
-                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "cover": "./portada_vwp.webp",
+                "name": "VW Phone",
+                "description": "Sitio web de tipo e-commerce de telefonos móviles bajo arquitectura REST. Proyecto de <strong> desarrollo fullstack </strong> diseñado y desarrollado desde cero utilizando <strong> HTML </strong>, <strong> CSS </strong>, <strong> JavaScript </strong>, <strong>Flask</strong> y <strong>MySQL</strong>",
+                "tech": ["HTML", "CSS", "JavaScript", "Flask", "MySQL"],
                 "images": [],
-                "github": "",
+                "github": "https://github.com/juanpp97/VW-Phone",
                 "deploy": ""
             },
             {
-                "cover": "./portada_dsh.webp",
-                "name": "Django Suites Hotel",
-                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
-                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "cover": "./portada_geosanitas.webp",
+                "name": "Geosanitas",
+                "description": "Sitio web de información sanitaria y de centros hospítalarios de la provincia de Córdoba, Argentina. Proyecto de <strong> desarrollo Frontend </strong>  diseñado y programado desde cero utilizando <strong> HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>",
+                "tech": ["HTML", "CSS", "Bootstrap", "JavaScript"],
                 "images": [],
-                "github": "",
-                "deploy": ""
-            },
-            {
-                "cover": "./portada_dsh.webp",
-                "name": "Django Suites Hotel",
-                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
-                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
-                "images": [],
-                "github": "",
-                "deploy": ""
+                "github": "https://github.com/juanpp97/Geosanitas",
+                "deploy": "https://geosanitas.netlify.app/"
             }
-            
         ]
     }
 

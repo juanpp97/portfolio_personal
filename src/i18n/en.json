@@ -19,17 +19,36 @@
     "projects": {
         "title": "Proyectos",
         "gallery": "Gallery",
+        "load_more": "Load more",
 
 
         "detail": [
             {
                 "cover": "../portada_dsh.webp",
                 "name": "Django Suites Hotel",
-                "description": "Hotel management website and reservation system. Full Stack development project, designed and developed from scratch using <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> and <strong> PostgreSQL </strong>.",
+                "description": "Hotel management website and reservation system. <strong> Full Stack development </strong> project, designed and developed from scratch using <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> and <strong> PostgreSQL </strong>.",
                 "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
                 "images": [],
                 "github": "",
                 "deploy": ""
+            },
+            {
+                "cover": "../portada_vwp.webp",
+                "name": "VW Phone",
+                "description": "Mobile phones e-commerce like website built under REST architecture. <strong> Full Stack development </strong> project designed and developed from scratch using <strong> HTML </strong>, <strong> CSS </strong>, <strong> JavaScript </strong>, <strong>Flask</strong> and <strong>MySQL</strong> ",
+                "tech": ["HTML", "CSS", "JavaScript", "Flask", "MySQL"],
+                "images": [],
+                "github": "https://github.com/juanpp97/VW-Phone",
+                "deploy": ""
+            },
+            {
+                "cover": "./portada_geosanitas.webp",
+                "name": "Geosanitas",
+                "description": "Website with sanitary information and hospital centers in Cordoba, Argentina. <strong> Frontend development </strong> project designed and developed from scratch using <strong> HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>",
+                "tech": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+                "images": [],
+                "github": "https://github.com/juanpp97/Geosanitas",
+                "deploy": "https://geosanitas.netlify.app/"
             }
         ]
     }

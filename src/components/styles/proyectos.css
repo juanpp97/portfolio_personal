@@ -1,0 +1,15 @@
+.more{
+display: flex;
+justify-content: center;
+}
+.more__btn{
+    font-size: 1em;
+    color: var(--bg-color);
+    background-color: var(--bg-toggle-btn);
+    padding: 5px 10px;
+    margin: auto;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 3px 4px var(--btn-shadow);
+
+}

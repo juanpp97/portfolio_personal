@@ -3,7 +3,7 @@ import { getI18N } from '@/i18n';
 import DOMPurify from 'isomorphic-dompurify';
 import Button from '@/components/Button'
 import ProjectCard from '@/components/ProjectCard';
-
+import '@/components/styles/proyectos.css'
 
 interface Props {
     currentLocale?: string;
@@ -21,9 +21,15 @@ interface Props {
 
         <section id="projects">
           <h1 className="heading"> {i18n.title} </h1>
-          <ProjectCard currentLocale={currentLocale} project={i18n.detail[0]} gallery={gallery} github={github} deploy={deploy} >
-          </ProjectCard>
-          {(total - count) >= 0 && <Button text={i18n.gallery} onClick={() => setCount(count + 3)}></Button>}
+          {i18n.detail.slice(0, count).map((project) => (
+            <ProjectCard currentLocale={currentLocale} project={project} gallery={gallery} github={github} deploy={deploy}/>
+          ))}
+
+          {(total - count) > 0 && 
+          <div className="more">
+            <button onClick={() => setCount(count + 3)} className={"more__btn"}>{i18n.load_more}</button>
+          </div>
+          }
       
         </section>
     )

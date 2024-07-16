@@ -8,6 +8,8 @@ import PostgreSQL from '@/components/icons/PostgreSQL'
 import Bootstrap from '@/components/icons/Bootstrap'
 import JavaScript from '@/components/icons/JavaScript'
 import CSS from '@/components/icons/CSS'
+import HTML from '@/components/icons/HTML'
+import MySQL from '@/components/icons/MySQL'
 import { getI18N } from '@/i18n';
 import '@/components/styles/card.css'
 import { error } from 'node_modules/astro/dist/core/logger/core';
@@ -23,6 +25,8 @@ interface Mapping {
     JavaScript: <JavaScript/>,
     Bootstrap: <Bootstrap/>,
     PostgreSQL: <PostgreSQL/>,
+    MySQL: <MySQL/>,
+    HTML: <HTML/>,
   }
 
 interface Props {
@@ -34,7 +38,8 @@ interface Props {
   };
 
 export default function ProjectCard({currentLocale = 'es', project, gallery, github, deploy}: Props){
- 
+    const i18n = getI18N({ currentLocale })["projects"];
+
     return (
     <article class="project__card">
         <picture class="card__image">
@@ -55,11 +60,11 @@ export default function ProjectCard({currentLocale = 'es', project, gallery, git
 
             <div className="buttons">
 
-                <Button text={ getI18N({ currentLocale })["projects"].gallery}> {gallery} </Button>
+                <Button text={ i18n.gallery}> {gallery} </Button>
 
                 <Button text='Github'> {github} </Button>
 
-                <Button text='Deploy'> {deploy} </Button>
+                {project.deploy && <Button text='Deploy'> {deploy} </Button>}
 
             </div>
         </div>
