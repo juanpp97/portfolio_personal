@@ -9,7 +9,7 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <section id="experience">
-    <h1 class="experience__title">
+    <h1 class="heading">
         {i18n.experience.title}
     </h1>
     <ExperienceCard title={i18n.experience.unsl.position}, date={i18n.experience.unsl.date}, place={i18n.experience.unsl.place}, description={i18n.experience.unsl.description}>
@@ -26,12 +26,6 @@ const i18n = getI18N({ currentLocale });
 <style>
     #experience{
         margin: 50px auto;
-    }
-    .experience__title{
-        text-align: center;
-        font-size: 2em;
-        color: var(--color-headings);
-        font-weight: 400;
     }
     .logo {
         max-width: 130px;

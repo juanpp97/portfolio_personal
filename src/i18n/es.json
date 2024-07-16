@@ -15,5 +15,22 @@
             "place": "Universidad Nacional de San Luis",
             "description": "Dictado de clases prácticas de procesamiento de señales, imágenes, y arquitectura y programación sistemas embebidos para diversas aplicaciones, además de tareas de investigación en dichos temas"
         }
+    },
+    "projects": {
+        "title": "Proyectos",
+        "gallery": "Galería",
+
+        "detail": [
+            {
+                "cover": "src/assets/portada_dsh.webp",
+                "name": "Django Suites Hotel",
+                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
+                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "images": [],
+                "github": "",
+                "deploy": ""
+            }
+        ]
     }
+
 }

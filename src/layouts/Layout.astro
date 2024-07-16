@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Ingeniero electrónico y desarrollador backend con amplia experiencia en el desarrollo de aplicaciones web" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -41,7 +41,7 @@ const lang = getLangFromUrl(Astro.url);
 
 		--bg-color: rgb(241, 241, 243);
 		--bg-language: rgb(217, 217, 217);
-		--bg-pill: rgb(217, 217, 217);
+		--bg-pill: rgb(210, 210, 210);
 		--bg-pill-90: rgba(217, 217, 217, 0.9);
 		--bg-header-btn: rgb(29, 132, 181);
 		--bg-toggle-btn: rgb(50, 48, 49);
@@ -121,9 +121,13 @@ const lang = getLangFromUrl(Astro.url);
 	.hide {
 		display: none !important;
 	}
-	.heading {
-		color: var(--color-headings);
-	}
+
+	.heading{
+        text-align: center;
+        font-size: 2em;
+        color: var(--color-headings);
+        font-weight: 400;
+    }
 	@media screen and (min-width: 1200px) {
 		.container {
 			max-width: 1200px;

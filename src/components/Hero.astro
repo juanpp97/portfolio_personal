@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import cara from "../assets/cara.webp";
-import Button from "@/components/HeroButton.astro";
+import ButtonReact from "@/components/Button.tsx";
 import GitHub from "@/components/icons/GitHub.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
 import Mail from "@/components/icons/Mail.astro";
@@ -26,15 +26,16 @@ const mailText = t('btn.contact');
                 {i18n.hero.description}
             </p>
             <div class="social">
-                <Button href="https://github.com/juanpp97" text="Github">
+                <ButtonReact href="https://github.com/juanpp97" text="Github" target="_blank">
                     <GitHub/>
-                </Button>
-                <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
+                </ButtonReact>
+                <ButtonReact href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn" target="_blank">
                     <LinkedIn/>
-                </Button>
-                <Button href="mailto:juanpablopenaloza97@gmail.com" text={mailText}>
+                </ButtonReact>
+                <ButtonReact href="mailto:juanpablopenaloza97@gmail.com" text={mailText} target="_blank">
                     <Mail/>
-                </Button>
+                </ButtonReact>
+
             </div>
         </div>
         <picture>
@@ -47,15 +48,15 @@ const mailText = t('btn.contact');
         {i18n.hero.description}
     </p>
     <div class="social">
-        <Button href="https://github.com/juanpp97" text="Github">
+        <ButtonReact href="https://github.com/juanpp97" text="Github" target="_blank">
             <GitHub/>
-        </Button>
-        <Button href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn">
+        </ButtonReact>
+        <ButtonReact href="https://www.linkedin.com/in/jp-pe/" text="LinkedIn" target="_blank">
             <LinkedIn/>
-        </Button>
-        <Button href="mailto:juanpablopenaloza97@gmail.com" text={t('btn.contact')}>
+        </ButtonReact>
+        <ButtonReact href="mailto:juanpablopenaloza97@gmail.com" text={mailText} target="_blank">
             <Mail/>
-        </Button>
+        </ButtonReact>
 
     </div>
 </section>
@@ -63,7 +64,6 @@ const mailText = t('btn.contact');
 <style>
     .hero{
         margin: 20px auto;
-        
 
     }
     .hero__content {

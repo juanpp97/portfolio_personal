@@ -1,0 +1,18 @@
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-btn);
+    color: var(--color-text);
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--btn-shadow);
+    box-shadow: 0 4px 4px var(--btn-shadow);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+
+}
+.btn:hover{
+    transform: translateY(-2px);
+}

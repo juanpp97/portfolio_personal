@@ -3,6 +3,11 @@ import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import Hero from '@/components/Hero.astro'
 import Experience from '@/components/Experience.astro';
+import GitHub from '@/components/icons/GitHub.astro';
+import Gallery from '@/components/icons/Gallery.astro';
+import Deploy from '@/components/icons/Deploy.astro';
+import Proyectos from '@/components/Proyectos.tsx';
+
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -13,7 +18,13 @@ const i18n = getI18N({ currentLocale })
 	<main class="container">
 		<Hero/>
 		<Experience/>
+		<Proyectos currentLocale={currentLocale} client:visible>
+			<Gallery slot="gallery"></Gallery>
+			<GitHub slot="github"></Mail>
+			<Deploy slot="deploy"></Deploy>
+		</Proyectos>
 
+	
 	</main>
 </Layout>
 <style>
@@ -21,5 +32,5 @@ const i18n = getI18N({ currentLocale })
 		color: var(--color-text);
 		min-height: 100vh;
 		position: relative;
-	}
+	}	
 </style>
