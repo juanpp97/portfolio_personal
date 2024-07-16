@@ -62,9 +62,9 @@ export default function ProjectCard({currentLocale = 'es', project, gallery, git
 
                 <Button text={ i18n.gallery}> {gallery} </Button>
 
-                <Button text='Github'> {github} </Button>
+                <Button text='Github' href={project.github} target='_blank'> {github} </Button>
 
-                {project.deploy && <Button text='Deploy'> {deploy} </Button>}
+                {project.deploy && <Button text='Deploy' href={project.deploy} target='_blank'> {deploy} </Button>}
 
             </div>
         </div>
