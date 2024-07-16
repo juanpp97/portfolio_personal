@@ -23,7 +23,7 @@
 
         "detail": [
             {
-                "cover": "../assets/portada_dsh.webp",
+                "cover": "/public/portada_dsh.webp",
                 "name": "Django Suites Hotel",
                 "description": "Hotel management website and reservation system. Full Stack development project, designed and developed from scratch using <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> and <strong> PostgreSQL </strong>.",
                 "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],

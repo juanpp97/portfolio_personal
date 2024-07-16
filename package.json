@@ -20,5 +20,8 @@
     "jsdom": "^24.1.0",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11"
   }
 }

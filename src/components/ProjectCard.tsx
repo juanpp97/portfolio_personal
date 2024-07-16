@@ -9,8 +9,8 @@ import Bootstrap from '@/components/icons/Bootstrap'
 import JavaScript from '@/components/icons/JavaScript'
 import CSS from '@/components/icons/CSS'
 import { getI18N } from '@/i18n';
-
 import '@/components/styles/card.css'
+import { error } from 'node_modules/astro/dist/core/logger/core';
 
 interface Mapping {
     [key: string]: preact.ComponentChildren;
@@ -34,6 +34,7 @@ interface Props {
   };
 
 export default function ProjectCard({currentLocale = 'es', project, gallery, github, deploy}: Props){
+ 
     return (
     <article class="project__card">
         <picture class="card__image">
