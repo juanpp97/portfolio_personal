@@ -7,9 +7,11 @@
     }
 .project__card .card__image {
     padding: 0 20px 0 10px;
-    height: 100%;
-    max-width: 350px;
+    flex-basis: 350px;
+    flex-shrink: 1;
+
 }
+
 .cover {
     width: 100%;
     height: 100%;
@@ -18,6 +20,7 @@
     border-radius: 20px;
 }
 .project__card .card__content {
+    flex-shrink: 4;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -39,6 +42,53 @@ strong{
     gap: 20px;
 }
 .buttons{
+
     display: flex;
     gap: 25px;
+}
+@media screen and (width < 800px) {
+    .project__card{
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    .project__card .card__image {
+        padding: 0;
+        max-height: 320px;
+    
+    }
+    .project__card .card__content {
+        gap: .75em;
+    }
+    .buttons{
+        margin-top: 10px;
+    }
+}
+@media screen and (width < 700px){
+    .project__card .card__image {
+        max-height: 250px;
+    
+    }
+}
+@media screen and (width < 500px) {
+    .project__card{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .project__card .card__image {
+        max-height: 200px;
+    
+    }
+    .technologies{
+        gap: .7em;
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    .btn{
+        gap: 8px;
+        padding: 5px;
+   
+    }
 }

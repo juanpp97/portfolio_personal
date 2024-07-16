@@ -15,6 +15,7 @@ interface Props {
   export default function Proyectos({currentLocale = 'es', gallery, github, deploy}: Props) {
     const [count, setCount] = useState(3);
     const i18n = getI18N({ currentLocale })["projects"];
+    const total = i18n.detail.length;
     const text = DOMPurify.sanitize(i18n.detail[0].description)
     return (
 
@@ -22,8 +23,8 @@ interface Props {
           <h1 className="heading"> {i18n.title} </h1>
           <ProjectCard currentLocale={currentLocale} project={i18n.detail[0]} gallery={gallery} github={github} deploy={deploy} >
           </ProjectCard>
-
-
+          {(total - count) >= 0 && <Button text={i18n.gallery} onClick={() => setCount(count + 3)}></Button>}
+      
         </section>
     )
 }

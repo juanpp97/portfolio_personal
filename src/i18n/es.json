@@ -29,7 +29,35 @@
                 "images": [],
                 "github": "",
                 "deploy": ""
+            },
+            {
+                "cover": "./portada_dsh.webp",
+                "name": "Django Suites Hotel",
+                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
+                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "images": [],
+                "github": "",
+                "deploy": ""
+            },
+            {
+                "cover": "./portada_dsh.webp",
+                "name": "Django Suites Hotel",
+                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
+                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "images": [],
+                "github": "",
+                "deploy": ""
+            },
+            {
+                "cover": "./portada_dsh.webp",
+                "name": "Django Suites Hotel",
+                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
+                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "images": [],
+                "github": "",
+                "deploy": ""
             }
+            
         ]
     }
 
