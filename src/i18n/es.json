@@ -22,12 +22,12 @@
         "load_more": "Cargar más",
         "detail": [
             {
-                "cover": "./portada_dsh.webp",
-                "name": "Django Suites Hotel",
-                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
-                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "cover": "./portada_labrem.webp",
+                "name": "Laboratorio Remoto de Cinemática (en desarrollo)",
+                "description": "Diseño y desarrollo de aplicacion web bajo arquitectura REST y sitio web para el funcionamiento del laboratorio remoto de cinemática de la Facultad de Ingeniería y Ciencias Agropecuarias de la Univerdidad Nacional de San Luis. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
+                "tech": ["HTML", "CSS", "ReactJS", "Flask"],
                 "images": [],
-                "github": "https://github.com/juanpp97/proyecto-django",
+                "github": "https://github.com/juanpp97/labremoto",
                 "deploy": ""
             },
             {

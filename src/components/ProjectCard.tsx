@@ -10,6 +10,7 @@ import JavaScript from '@/components/icons/JavaScript'
 import CSS from '@/components/icons/CSS'
 import HTML from '@/components/icons/HTML'
 import MySQL from '@/components/icons/MySQL'
+import ReactJS from '@/components/icons/ReactJS'
 import { getI18N } from '@/i18n';
 import '@/components/styles/card.css'
 import { error } from 'node_modules/astro/dist/core/logger/core';
@@ -27,6 +28,7 @@ interface Mapping {
     PostgreSQL: <PostgreSQL/>,
     MySQL: <MySQL/>,
     HTML: <HTML/>,
+    ReactJS: <ReactJS/>
   }
 
 interface Props {
