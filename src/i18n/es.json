@@ -31,6 +31,15 @@
                 "deploy": ""
             },
             {
+                "cover": "./portada_dsh.webp",
+                "name": "Django Suites Hotel",
+                "description": "Sitio web de administración hotelera y sistema de reserva. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> y <strong> PostgreSQL </strong>",
+                "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
+                "images": [],
+                "github": "https://github.com/juanpp97/proyecto-django",
+                "deploy": ""
+            },
+            {
                 "cover": "./portada_vwp.webp",
                 "name": "VW Phone",
                 "description": "Sitio web de tipo e-commerce de telefonos móviles bajo arquitectura REST. Proyecto de <strong> desarrollo fullstack </strong> diseñado y desarrollado desde cero utilizando <strong> HTML </strong>, <strong> CSS </strong>, <strong> JavaScript </strong>, <strong>Flask</strong> y <strong>MySQL</strong>",

@@ -71,8 +71,10 @@ strong{
 }
 @media screen and (width < 500px) {
     .project__card{
+        
         flex-direction: column;
         padding: 0 10px;
+        max-width: 40ch;
     }
     .project__card .card__image {
         max-height: 200px;

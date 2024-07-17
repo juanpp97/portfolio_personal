@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import cara from "../assets/cara.webp";
+import cara from "../assets/back-end-development.png";
 import ButtonReact from "@/components/Button.tsx";
 import GitHub from "@/components/icons/GitHub.astro";
 import LinkedIn from "@/components/icons/LinkedIn.astro";
@@ -69,6 +69,7 @@ const mailText = t('btn.contact');
     .hero__content {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5%;
 
     }
@@ -101,11 +102,12 @@ const mailText = t('btn.contact');
     .face {
         width: 100%;
         height: 100%;
+        max-height: 250px;
         min-width: 170px;
         object-fit: cover;
         object-position: center;
         border-radius: 144px;
-        border: 3px solid var(--color-important);
+        /* border: 3px solid var(--color-important); */
     }
     .hero > .social,
     .hero > .description {
