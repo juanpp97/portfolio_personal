@@ -78,11 +78,13 @@ const { title, date, place, description } = Astro.props;
     }
     @media screen and (width < 600px) {
         .experience__card {
+            
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 35ch;
             padding: 20px 30px;
+            margin: 20px auto;
         }
         .card__content {
             text-align: center;
