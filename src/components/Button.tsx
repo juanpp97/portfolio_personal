@@ -7,11 +7,18 @@ interface Props{
     children?: preact.ComponentChildren;
     onClick?: (e:MouseEvent) => any
 }
-export default function Button({href, text, target, onClick, children}: Props) {
+export default function Button({ href, text, target, onClick, children }: Props) {
     return (
-        <a href={href} className="btn" target={target} onClick={onClick}>
-            {children}
-            {text}
-        </a>
-    )
+        href ? (
+            <a href={href} className="btn" target={target} onClick={onClick}>
+                {children}
+                {text}
+            </a>
+        ) : (
+            <button className="btn" onClick={onClick}>
+                {children}
+                {text}
+            </button>
+        )
+    );
 }
