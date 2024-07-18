@@ -3,7 +3,7 @@ import { getI18N } from '@/i18n';
 import DOMPurify from 'isomorphic-dompurify';
 import Button from '@/components/Button'
 import ProjectCard from '@/components/ProjectCard';
-// import Modal from '@/components/Modal'
+import Modal from '@/components/Modal'
 import '@/components/styles/proyectos.css'
 
 interface Props {
@@ -40,7 +40,7 @@ interface Props {
             <button onClick={() => setCount(count + 3)} className={"more__btn"}>{i18n.load_more}</button>
           </div>
           }
-        {imagesModal.length > 0 && <Modal images={imagesModal} onClose = {closeModal}/>}
+        {/* {imagesModal.length > 0 && <Modal images={imagesModal} onClose = {closeModal}/>} */}
         </section>
     )
 }
