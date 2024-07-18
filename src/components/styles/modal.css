@@ -1,0 +1,178 @@
+.overlay {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.modal__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.modal__image {
+    box-sizing: border-box;
+    height: calc(100vh - 200px);
+    max-width: 1200px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+#modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 1000;
+    background-color: rgb(204, 204, 204, .5);
+    border-radius: 50%;
+    padding: 0 10px;
+}
+
+#modal-close:hover,
+#modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.glide {
+    position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.glide * {
+    box-sizing: inherit;
+}
+
+.glide__track {
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+.glide__slides {
+    position: relative;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+}
+
+.glide__slides--dragging {
+    user-select: none;
+}
+
+.glide__slide {
+    position: relative;
+    white-space: normal;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.glide__slide a {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.glide__arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.glide__arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.glide__arrow--left {
+    left: 20px;
+}
+
+.glide__arrow--right {
+    right: 20px;
+}
+
+.glide__slide img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+@media (width < 1200px) {
+    .modal__image {
+        max-width: calc(100% - 2rem);
+
+    }
+
+    .arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    #modal-close {
+
+        font-size: 1.5em;
+        padding: 0 8px;
+    }
+}
+
+@media (width < 800px) {
+    .modal__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .modal__content {
+        width: 100%;
+
+    }
+
+    .arrow {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    #modal-close {
+
+        font-size: 1em;
+        padding: 0 6px;
+    }
+}

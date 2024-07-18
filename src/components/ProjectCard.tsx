@@ -37,9 +37,10 @@ interface Props {
     gallery: preact.ComponentChildren;
     github: preact.ComponentChildren;
     deploy: preact.ComponentChildren;
+    onClick?: (e:MouseEvent) => any
   };
 
-export default function ProjectCard({currentLocale = 'es', project, gallery, github, deploy}: Props){
+export default function ProjectCard({currentLocale = 'es', project, gallery, github, deploy, onClick}: Props){
     const i18n = getI18N({ currentLocale })["projects"];
 
     return (
@@ -62,7 +63,7 @@ export default function ProjectCard({currentLocale = 'es', project, gallery, git
 
             <div className="buttons">
 
-                <Button text={ i18n.gallery}> {gallery} </Button>
+                <Button text={ i18n.gallery} onClick={onClick}> {gallery} </Button>
 
                 <Button text='Github' href={project.github} target='_blank'> {github} </Button>
 
