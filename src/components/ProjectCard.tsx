@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'preact/hooks';
 import Button from '@/components/Button'
 import Pill from '@/components/Pill'
 import DOMPurify from 'isomorphic-dompurify';
@@ -13,7 +12,6 @@ import MySQL from '@/components/icons/MySQL'
 import ReactJS from '@/components/icons/ReactJS'
 import { getI18N } from '@/i18n';
 import '@/components/styles/card.css'
-import { error } from 'node_modules/astro/dist/core/logger/core';
 
 interface Mapping {
     [key: string]: preact.ComponentChildren;

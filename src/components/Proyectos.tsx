@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { getI18N } from '@/i18n';
 import DOMPurify from 'isomorphic-dompurify';
 import Button from '@/components/Button'
@@ -18,7 +18,6 @@ interface Props {
     const [count, setCount] = useState(3);
     const i18n = getI18N({ currentLocale })["projects"];
     const total = i18n.detail.length;
-    const text = DOMPurify.sanitize(i18n.detail[0].description)
 
     const openModal = (images: Array<string>) => {
       setImagesModal(images);
