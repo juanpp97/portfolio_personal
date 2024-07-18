@@ -14,19 +14,19 @@ export default function Modal({ images, onClose }: Props) {
     onClose()
   }
   useEffect(() => {
-    let glide:any;
-    // let content = document.getElementById("content");
+    let glide: Glide;
+    let content = document.getElementById("content");
     setTimeout(() => {
       glide = new Glide(".glide");
       glide.mount();
-      // if(content) content.style.opacity = "1";
+      if(content) content.style.opacity = "1";
     }, 10);
-    // document.addEventListener("keydown", handleEscape)
-    // return () => {
-    //   // glide.destroy()
-    //   // if(content) content.style.opacity = "0";
-    //   // document.removeEventListener("keydown", handleEscape)
-    // };
+    document.addEventListener("keydown", handleEscape)
+    return () => {
+      glide.destroy()
+      if(content) content.style.opacity = "0";
+      document.removeEventListener("keydown", handleEscape)
+    };
   })
 
   return (
