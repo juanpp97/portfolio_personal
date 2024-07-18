@@ -1,7 +1,5 @@
 import { useState } from 'preact/hooks';
 import { getI18N } from '@/i18n';
-import DOMPurify from 'isomorphic-dompurify';
-import Button from '@/components/Button'
 import ProjectCard from '@/components/ProjectCard';
 import Modal from '@/components/Modal'
 import '@/components/styles/proyectos.css'

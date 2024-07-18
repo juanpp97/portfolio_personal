@@ -1,5 +1,9 @@
 {
     "title": "Juan P. Peñaloza | Backend Developer",
+    "resume_link": "../Resume.pdf",
+    "download_name": "Resume - JPPeñaloza.pdf",
+
+
     "hero": {
         "greeting": "Hi, I am",
         "name": "Juan Pablo Peñaloza",
@@ -67,7 +71,16 @@
                 "name": "VW Phone",
                 "description": "Mobile phones e-commerce like website built under REST architecture. <strong> Full Stack development </strong> project designed and developed from scratch using <strong> HTML </strong>, <strong> CSS </strong>, <strong> JavaScript </strong>, <strong>Flask</strong> and <strong>MySQL</strong> ",
                 "tech": ["HTML", "CSS", "JavaScript", "Flask", "MySQL"],
-                "images": [],
+                "images": [
+                    "../VW/VW1.webp",
+                    "../VW/VW2.webp",
+                    "../VW/VW3.webp",
+                    "../VW/VW4.webp",
+                    "../VW/VW5.webp",
+                    "../VW/VW6.webp",
+                    "../VW/VW7.webp",
+                    "../VW/VW8.webp"
+                ],
                 "github": "https://github.com/juanpp97/VW-Phone",
                 "deploy": ""
             },
@@ -76,7 +89,15 @@
                 "name": "Geosanitas",
                 "description": "Website with sanitary information and hospital centers in Cordoba, Argentina. <strong> Frontend development </strong> project designed and developed from scratch using <strong> HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>",
                 "tech": ["HTML", "CSS", "Bootstrap", "JavaScript"],
-                "images": [],
+                "images": [
+                    "../Geosanitas/G1.webp",
+                    "../Geosanitas/G2.webp",
+                    "../Geosanitas/G3.webp",
+                    "../Geosanitas/G4.webp",
+                    "../Geosanitas/G5.webp",
+                    "../Geosanitas/G6.webp",
+                    "../Geosanitas/G7.webp"
+                ],
                 "github": "https://github.com/juanpp97/Geosanitas",
                 "deploy": "https://geosanitas.netlify.app/"
             }

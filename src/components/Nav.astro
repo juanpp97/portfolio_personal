@@ -1,9 +1,11 @@
 ---
 import MenuIcon from "@/components/icons/Menu.astro";
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const { currentLocale } = Astro;
+import { getI18N } from "@/i18n";
+const i18n = getI18N({ currentLocale });
 ---
 
 <nav class="header__nav">
@@ -11,7 +13,7 @@ const t = useTranslations(lang);
     <a href="#projects" class="nav__link">{t('nav.projects')}</a>
     <a href="#tech" class="nav__link">{t('nav.tech')}</a>
     <a href="#about" class="nav__link">{t('nav.about')}</a>
-    <a href="" class="nav__link cv">{t('nav.resume')}</a>
+    <a href={i18n.resume_link} download={i18n.download_name} class="nav__link cv">{t('nav.resume')}</a>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -31,7 +33,7 @@ const t = useTranslations(lang);
         <a href="#projects"><li class="dropdown__link">{t('nav.projects')}</li></a>
         <a href="#tech"><li class="dropdown__link">{t('nav.tech')}</li></a>
         <a href="#about"><li class="dropdown__link">{t('nav.about')}</li></a>
-        <a href=""><li class="dropdown__link cv">{t('nav.resume')}</li></a>
+        <a href={i18n.resume_link} download={i18n.download_name}><li class="dropdown__link cv">{t('nav.resume')}</li></a>
     </ul>
 </nav>
 <style>

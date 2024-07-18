@@ -6,6 +6,11 @@ export default function Modal({ images, onClose }) {
     if (event.key !== "Escape") return;
     onClose();
   };
+  const handleClick = (event) => {
+    console.log(event.target.closest("div"))
+    if (!event.target.closest("div").classList.contains('overlay')) return;
+    onClose();
+  };
 
   useEffect(() => {
     let glide;
@@ -14,6 +19,7 @@ export default function Modal({ images, onClose }) {
       glide = new Glide(".glide").mount();
     };
 
+    
     const content = document.getElementById("content");
     setTimeout(() => {
       loadGlide();
@@ -21,11 +27,14 @@ export default function Modal({ images, onClose }) {
     }, 100);
 
     document.addEventListener("keydown", handleEscape);
+    document.addEventListener("click", handleClick);
 
     return () => {
       glide?.destroy();
       if (content) content.style.opacity = "0";
       document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("click", handleClick);
+      
     };
   }, [handleEscape]);
 
