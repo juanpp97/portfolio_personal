@@ -1,6 +1,5 @@
 import '@/components/styles/modal.css'
 import { useEffect } from 'preact/hooks';
-import Glide from "@glidejs/glide";
 
 
 
@@ -11,15 +10,20 @@ export default function Modal({ images, onClose }) {
     onClose()
   }
   useEffect(() => {
-    let glide = new Glide(".glide");
+    let glide;
+
+
     let content = document.getElementById("content");
     setTimeout(() => {
+      import("@glidejs/glide").then(() => {
+        glide = new Glide(".glide")?.mount()
+      });
       // glide.mount();
       if(content) content.style.opacity = "1";
     }, 10);
     document.addEventListener("keydown", handleEscape)
     return () => {
-      // glide.destroy()
+      glide?.destroy()
       if(content) content.style.opacity = "0";
       document.removeEventListener("keydown", handleEscape)
     };
