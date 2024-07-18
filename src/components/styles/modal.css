@@ -1,4 +1,4 @@
-/* .overlay {
+.overlay {
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -175,4 +175,4 @@
         font-size: 1em;
         padding: 0 6px;
     }
-} */
+}
