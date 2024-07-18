@@ -3,18 +3,15 @@ import { useEffect } from 'preact/hooks';
 import Glide from "@glidejs/glide";
 
 
-interface Props {
-  images: Array<string>;
-  onClose: () => void;
-}
 
-export default function Modal({ images, onClose }: Props) {
-  const handleEscape = (event: KeyboardEvent) => {
+
+export default function Modal({ images, onClose }) {
+  const handleEscape = (event) => {
     if(event.key !== "Escape") return
     onClose()
   }
   useEffect(() => {
-    let glide: Glide;
+    let glide;
     let content = document.getElementById("content");
     setTimeout(() => {
       glide = new Glide(".glide");
