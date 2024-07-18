@@ -7,7 +7,6 @@ export default function Modal({ images, onClose }) {
     onClose();
   };
   const handleClick = (event) => {
-    console.log(event.target.closest("div"))
     if (!event.target.closest("div").classList.contains('overlay')) return;
     onClose();
   };
@@ -24,16 +23,16 @@ export default function Modal({ images, onClose }) {
     setTimeout(() => {
       loadGlide();
       if (content) content.style.opacity = "1";
-    }, 100);
+    }, 1000);
 
     document.addEventListener("keydown", handleEscape);
-    document.addEventListener("click", handleClick);
+    document.addEventListener("pointerdown", handleClick);
 
     return () => {
       glide?.destroy();
       if (content) content.style.opacity = "0";
       document.removeEventListener("keydown", handleEscape);
-      document.removeEventListener("click", handleClick);
+      document.removeEventListener("pointerdown", handleClick);
       
     };
   }, [handleEscape]);
