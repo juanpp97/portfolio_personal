@@ -5,29 +5,29 @@ import Glide from "@glidejs/glide";
 
 interface Props {
   images: Array<string>;
-  onClose?: () => void;
+  onClose: () => void;
 }
 
 export default function Modal({ images, onClose }: Props) {
-  // const handleEscape = (event: KeyboardEvent) => {
-  //   if(event.key !== "Escape") return
-  //   onClose()
-  // }
-  // useEffect(() => {
-  //   let glide:any;
-  //   let content = document.getElementById("content");
-  //   setTimeout(() => {
-  //     glide = new Glide(".glide");
-  //     glide.mount();
-  //     if(content) content.style.opacity = "1";
-  //   }, 10);
-  //   document.addEventListener("keydown", handleEscape)
-  //   return () => {
-  //     glide.destroy()
-  //     if(content) content.style.opacity = "0";
-  //     document.removeEventListener("keydown", handleEscape)
-  //   };
-  // })
+  const handleEscape = (event: KeyboardEvent) => {
+    if(event.key !== "Escape") return
+    onClose()
+  }
+  useEffect(() => {
+    let glide:any;
+    // let content = document.getElementById("content");
+    setTimeout(() => {
+      glide = new Glide(".glide");
+      glide.mount();
+      // if(content) content.style.opacity = "1";
+    }, 10);
+    // document.addEventListener("keydown", handleEscape)
+    // return () => {
+    //   // glide.destroy()
+    //   // if(content) content.style.opacity = "0";
+    //   // document.removeEventListener("keydown", handleEscape)
+    // };
+  })
 
   return (
     <div className={"overlay"}>

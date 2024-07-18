@@ -22,7 +22,7 @@
     height: 100%;
     padding: 20px;
     margin: 0 auto;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 300ms ease;
 }
 
