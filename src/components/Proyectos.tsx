@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import { getI18N } from '@/i18n';
 import ProjectCard from '@/components/ProjectCard';
-import Modal from '@/components/Modal'
+// import Modal from '@/components/Modal'
 import '@/components/styles/proyectos.css'
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
     deploy?: preact.ComponentChildren;
   };
   export default function Proyectos({currentLocale = 'es', gallery, github, deploy}: Props) {
-    const [imagesModal, setImagesModal] = useState<Array<string>>([]);
+    // const [imagesModal, setImagesModal] = useState<Array<string>>([]);
     const [count, setCount] = useState(3);
     const i18n = getI18N({ currentLocale })["projects"];
     const total = i18n.detail.length;
