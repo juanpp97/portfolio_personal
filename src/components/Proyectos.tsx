@@ -11,18 +11,18 @@ interface Props {
     deploy?: preact.ComponentChildren;
   };
   export default function Proyectos({currentLocale = 'es', gallery, github, deploy}: Props) {
-    // const [imagesModal, setImagesModal] = useState<Array<string>>([]);
+    const [imagesModal, setImagesModal] = useState<Array<string>>([]);
     const [count, setCount] = useState(3);
     const i18n = getI18N({ currentLocale })["projects"];
     const total = i18n.detail.length;
 
-    // const openModal = (images: Array<string>) => {
-    //   setImagesModal(images);
-    // }
+    const openModal = (images: Array<string>) => {
+      setImagesModal(images);
+    }
 
-    // const closeModal = () => {
-    //   setImagesModal([]);
-    // }
+    const closeModal = () => {
+      setImagesModal([]);
+    }
 
     return (
 
