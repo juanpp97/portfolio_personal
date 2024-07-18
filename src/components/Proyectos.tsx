@@ -40,7 +40,7 @@ interface Props {
             <button onClick={() => setCount(count + 3)} className={"more__btn"}>{i18n.load_more}</button>
           </div>
           }
-        {/* {imagesModal.length > 0 && <Modal images={imagesModal} onClose = {closeModal}/>} */}
+        {imagesModal.length > 0 && <Modal images={imagesModal} onClose = {closeModal}/>}
         </section>
     )
 }
