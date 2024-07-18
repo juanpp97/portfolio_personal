@@ -1,33 +1,33 @@
-import '@/components/styles/modal.css'
+import '@/components/styles/modal.css';
 import { useEffect } from 'preact/hooks';
-
-
-
 
 export default function Modal({ images, onClose }) {
   const handleEscape = (event) => {
-    if(event.key !== "Escape") return
-    onClose()
-  }
+    if (event.key !== "Escape") return;
+    onClose();
+  };
+
   useEffect(() => {
     let glide;
-
-
-    let content = document.getElementById("content");
-    setTimeout(() => {
-      import("@glidejs/glide").then(() => {
-        glide = new Glide(".glide")?.mount()
-      });
-      // glide.mount();
-      if(content) content.style.opacity = "1";
-    }, 10);
-    document.addEventListener("keydown", handleEscape)
-    return () => {
-      glide?.destroy()
-      if(content) content.style.opacity = "0";
-      document.removeEventListener("keydown", handleEscape)
+    const loadGlide = async () => {
+      const { default: Glide } = await import("@glidejs/glide");
+      glide = new Glide(".glide").mount();
     };
-  })
+
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      loadGlide();
+      if (content) content.style.opacity = "1";
+    }, 10);
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      glide?.destroy();
+      if (content) content.style.opacity = "0";
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [handleEscape]);
 
   return (
     <div className={"overlay"}>
