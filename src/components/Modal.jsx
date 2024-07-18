@@ -18,7 +18,7 @@ export default function Modal({ images, onClose }) {
     setTimeout(() => {
       loadGlide();
       if (content) content.style.opacity = "1";
-    }, 10);
+    }, 100);
 
     document.addEventListener("keydown", handleEscape);
 
