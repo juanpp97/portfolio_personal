@@ -11,16 +11,15 @@ export default function Modal({ images, onClose }) {
     onClose()
   }
   useEffect(() => {
-    let glide;
+    let glide = new Glide(".glide");
     let content = document.getElementById("content");
     setTimeout(() => {
-      glide = new Glide(".glide");
-      glide.mount();
+      // glide.mount();
       if(content) content.style.opacity = "1";
     }, 10);
     document.addEventListener("keydown", handleEscape)
     return () => {
-      glide.destroy()
+      // glide.destroy()
       if(content) content.style.opacity = "0";
       document.removeEventListener("keydown", handleEscape)
     };
