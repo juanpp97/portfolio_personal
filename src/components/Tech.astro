@@ -1,0 +1,69 @@
+---
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })["techs"];
+import ReactJS from "@/components/icons/ReactJS.tsx";
+import Flask from "@/components/icons/Flask.tsx";
+import Django from "@/components/icons/Django.tsx";
+import CSS from "@/components/icons/CSS.tsx";
+import JavaScript from "@/components/icons/JavaScript.tsx";
+import Bootstrap from "@/components/icons/Bootstrap.tsx";
+import PostgreSQL from "@/components/icons/PostgreSQL.tsx";
+import MySQL from "@/components/icons/MySQL.tsx";
+import HTML from "@/components/icons/HTML.tsx";
+import Python from "@/components/icons/Python.astro";
+interface Mapping {
+    [key: string]: preact.ComponentChildren;
+  }
+  /* Map the name of the technology and its icon component */
+const mapping: Mapping = {
+    Flask: Flask,
+    Django: Django,
+    CSS: CSS,
+    JavaScript: JavaScript,
+    Bootstrap: Bootstrap,
+    PostgreSQL: PostgreSQL,
+    MySQL: MySQL ,
+    HTML: HTML,
+    ReactJS: ReactJS,
+    Python: Python,
+  }
+---
+
+<section id="techs">
+    <h1 class="heading">{i18n.title}</h1>
+    <section class="detail">
+        {
+            i18n.detail.map((tech) => {
+                const Component = mapping[tech];
+                return(
+                <article class="language">
+                    <Component width="60" height="60"/>
+                    {tech}
+                </article>
+                )
+            })
+        }
+    </section>
+</section>
+
+<style>
+    #techs {
+        margin: 20px auto;
+    }
+    .detail {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 2rem 5rem;
+        justify-items: center;
+        margin: 2rem auto;
+        max-width: 900px;
+    }
+    .language {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 1.25rem;
+    }
+</style>

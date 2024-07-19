@@ -7,7 +7,7 @@ export default function Modal({ images, onClose }) {
     onClose();
   };
   const handleClick = (event) => {
-    if (!event.target.closest("div").classList.contains('overlay') &&  !event.target.closest("div").id === "content") return;
+    if (!event.target.closest("div").classList.contains('overlay') &&  event.target.closest("div").id !== "content") return;
     onClose();
   };
 
@@ -16,6 +16,7 @@ export default function Modal({ images, onClose }) {
     const loadGlide = async () => {
       const { default: Glide } = await import("@glidejs/glide");
       glide = new Glide(".glide").mount();
+      glide.update();
     };
 
     
@@ -23,7 +24,7 @@ export default function Modal({ images, onClose }) {
     setTimeout(() => {
       loadGlide();
       if (content) content.style.opacity = "1";
-    }, 1000);
+    }, 100);
 
     document.addEventListener("keydown", handleEscape);
     document.addEventListener("click", handleClick);

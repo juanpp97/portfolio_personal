@@ -99,6 +99,10 @@
                 "deploy": "https://geosanitas.netlify.app/"
             }
         ]
+    },
+    "techs": {
+        "title": "Tecnologías",
+        "detail": ["Python","Django", "Flask", "ReactJS", "JavaScript", "HTML", "CSS", "Bootstrap", "PostgreSQL", "MySQL"]
     }
 
 }
