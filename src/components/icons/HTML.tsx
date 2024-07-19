@@ -4,7 +4,7 @@ interface Props {
     height?: string;
 }
 
-export default function Bootstrap({ width = "20", height = "20" }: Props) {
+export default function HTML({ width = "20", height = "20" }: Props) {
     return (
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520" width={width} height={height}>
   <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
