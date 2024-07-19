@@ -30,7 +30,7 @@
             {
                 "cover": "../portada_labrem.webp",
                 "name": "Kinematics Remote Laboratory (on development)",
-                "description": "Design and development of a web application under REST architecture and website for the operation of remote laboratory of kinematic of Facultad de Ingeniería y Ciencias Agropecuarias from Univerdidad Nacional de San Luis. <strong> full stack development </strong> project developed from scratch using  <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
+                "description": "Design and development of a web application under REST architecture and website for the operation of remote laboratory of kinematic of Facultad de Ingeniería y Ciencias Agropecuarias from <strong> Universidad Nacional de San Luis </strong>. Universidad Nacional de San Luis. <strong> full stack development </strong> project developed from scratch using  <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
                 "tech": ["HTML", "CSS", "ReactJS", "Flask"],
                 "images": [],
                 "github": "https://github.com/juanpp97/labremoto",

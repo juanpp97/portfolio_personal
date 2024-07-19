@@ -26,7 +26,7 @@
             {
                 "cover": "./portada_labrem.webp",
                 "name": "Laboratorio Remoto de Cinemática (en desarrollo)",
-                "description": "Diseño y desarrollo de aplicacion web bajo arquitectura REST y sitio web para el funcionamiento del laboratorio remoto de cinemática de la Facultad de Ingeniería y Ciencias Agropecuarias de la Univerdidad Nacional de San Luis. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
+                "description": "Diseño y desarrollo de aplicacion web bajo arquitectura REST y sitio web para el funcionamiento del laboratorio remoto de cinemática de la Facultad de Ingeniería y Ciencias Agropecuarias de la <strong> Universidad Nacional de San Luis </strong>. Proyecto de <strong> desarrollo full stack </strong> diseñado y desarrollado desde cero utilizando <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
                 "tech": ["HTML", "CSS", "ReactJS", "Flask"],
                 "images": [],
                 "github": "https://github.com/juanpp97/labremoto",

@@ -8,7 +8,7 @@ import PostgreSQL from "@/components/icons/PostgreSQL.tsx";
 import MySQL from "@/components/icons/MySQL.tsx";
 import HTML from "@/components/icons/HTML.tsx";
 import Python from "@/components/icons/Python.tsx";
-import '@/components/styles/technologies.css';
+import '@/components/styles/technologies.css'
 interface Mapping {
     [key: string]: preact.ComponentChildren;
   }
