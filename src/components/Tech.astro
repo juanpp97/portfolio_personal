@@ -1,17 +1,17 @@
 ---
+import SectionContainer from "@/components/SectionContainer.astro";
+
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })["techs"];
 import Technologies from '@/components/Technologies.tsx';
 ---
-
-<section id="tech">
+<SectionContainer id="tech"> 
     <h1 class="heading">{i18n.title}</h1>
     <section class="detail">
         <Technologies technologies={i18n.detail} client:visible/>
     </section>
-</section>
-
+</SectionContainer>
 <style>
     #tech {
         margin: 20px auto;

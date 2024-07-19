@@ -1,0 +1,17 @@
+---
+interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id} data-anchor>
+    <slot />
+</section>
+
+<style>
+    section[data-anchor]{
+        margin: 80px auto;
+    }
+</style>

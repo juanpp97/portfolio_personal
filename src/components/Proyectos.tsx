@@ -26,8 +26,7 @@ interface Props {
     }
 
     return (
-
-        <section id="projects">
+          <>
           <h1 className="heading"> {i18n.title} </h1>
           {i18n.detail.slice(0, count).map((project) => (
             <ProjectCard currentLocale={currentLocale} project={project} gallery={gallery} github={github} deploy={deploy} onClick={() => openModal(project.images)} />
@@ -39,6 +38,6 @@ interface Props {
           </div>
           }
         {imagesModal.length > 0 && <Modal images={imagesModal} onClose = {closeModal}/>}
-        </section>
-    )
+        </>
+      )
 }

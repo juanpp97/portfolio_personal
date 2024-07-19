@@ -9,10 +9,10 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <nav class="header__nav">
-    <a href="#experience" class="nav__link active">{t('nav.experience')}</a>
-    <a href="#projects" class="nav__link">{t('nav.projects')}</a>
-    <a href="#tech" class="nav__link">{t('nav.tech')}</a>
-    <a href="#about" class="nav__link">{t('nav.about')}</a>
+    <a href="#experience" class="nav__link active" data-anchor>{t('nav.experience')}</a>
+    <a href="#projects" class="nav__link" data-anchor>{t('nav.projects')}</a>
+    <a href="#tech" class="nav__link" data-anchor>{t('nav.tech')}</a>
+    <a href="#about" class="nav__link" data-anchor>{t('nav.about')}</a>
     <a href={i18n.resume_link} download={i18n.download_name} class="nav__link cv">{t('nav.resume')}</a>
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,10 +29,10 @@ const i18n = getI18N({ currentLocale });
         <MenuIcon />
     </svg>
     <ul class="nav__dropdown hide">
-        <a href="#experience"><li class="dropdown__link active">{t('nav.experience')}</li></a>
-        <a href="#projects"><li class="dropdown__link">{t('nav.projects')}</li></a>
-        <a href="#tech"><li class="dropdown__link">{t('nav.tech')}</li></a>
-        <a href="#about"><li class="dropdown__link">{t('nav.about')}</li></a>
+        <a href="#experience" data-anchor><li class="dropdown__link">{t('nav.experience')}</li></a>
+        <a href="#projects" data-anchor><li class="dropdown__link active">{t('nav.projects')}</li></a>
+        <a href="#tech" data-anchor><li class="dropdown__link">{t('nav.tech')}</li></a>
+        <a href="#about" data-anchor><li class="dropdown__link">{t('nav.about')}</li></a>
         <a href={i18n.resume_link} download={i18n.download_name}><li class="dropdown__link cv">{t('nav.resume')}</li></a>
     </ul>
 </nav>
@@ -112,6 +112,7 @@ const i18n = getI18N({ currentLocale });
         .header__nav{
             gap: .25rem;
             padding: 10px;
+            justify-content:space-around;
         }
 
     }

@@ -3,10 +3,7 @@ import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import Hero from '@/components/Hero.astro'
 import Experience from '@/components/Experience.astro';
-import GitHub from '@/components/icons/GitHub.astro';
-import Gallery from '@/components/icons/Gallery.astro';
-import Deploy from '@/components/icons/Deploy.astro';
-import Proyectos from '@/components/Proyectos.tsx';
+import ProjectsContainer from '@/components/ProjectsContainer.astro';
 import Tech from '@/components/Tech.astro';
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro
@@ -18,11 +15,7 @@ const i18n = getI18N({ currentLocale })
 	<main class="container">
 		<Hero/>
 		<Experience/>
-		<Proyectos currentLocale={currentLocale} client:visible>
-			<Gallery slot="gallery"></Gallery>
-			<GitHub slot="github"></Mail>
-			<Deploy slot="deploy"></Deploy>
-		</Proyectos>
+	<ProjectsContainer/>
 		<Tech/>
 	</main>
 </Layout>
@@ -33,3 +26,25 @@ const i18n = getI18N({ currentLocale })
 		position: relative;
 	}	
 </style>
+<script>
+
+	const sections = document.querySelectorAll('section[data-anchor]');
+	const checkIntersecting = (entries: IntersectionObserverEntry[]) => {
+	const links = document.querySelectorAll(`a[data-anchor]`);
+		entries.forEach((entry) => {
+			if(entry.isIntersecting){
+				console.log(entry.target.id)
+				links.forEach((link) => {
+					if(link.getAttribute('href') === `#${entry.target.id}`){
+						link.classList.add('active')
+					}else{
+						link.classList.remove('active')
+					}
+				})
+			}
+
+		})
+	}
+	let observer = new IntersectionObserver(checkIntersecting, {threshold: 0.5})
+	sections.forEach((section) => observer.observe(section));
+</script>

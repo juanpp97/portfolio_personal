@@ -30,7 +30,7 @@
             {
                 "cover": "../portada_labrem.webp",
                 "name": "Kinematics Remote Laboratory (on development)",
-                "description": "Design and development of a web application under REST architecture and website for the operation of remote laboratory of kinematic of Facultad de Ingeniería y Ciencias Agropecuarias from <strong> Universidad Nacional de San Luis </strong>. Universidad Nacional de San Luis. <strong> full stack development </strong> project developed from scratch using  <strong> HTML </strong>,<strong> CSS </strong>, <strong> React JS </strong> y <strong> Flask</strong>.",
+                "description": "Design and development of a web application under REST architecture and website for the operation of remote laboratory of kinematic of Facultad de Ingeniería y Ciencias Agropecuarias from <strong> Universidad Nacional de San Luis </strong>. Universidad Nacional de San Luis. <strong> full stack development </strong> project developed from scratch using  <strong> HTML</strong>,<strong> CSS</strong>, <strong> ReactJS</strong> and <strong> Flask</strong>.",
                 "tech": ["HTML", "CSS", "ReactJS", "Flask"],
                 "images": [],
                 "github": "https://github.com/juanpp97/labremoto",
@@ -39,7 +39,7 @@
             {
                 "cover": "../portada_dsh.webp",
                 "name": "Django Suites Hotel",
-                "description": "Hotel management website and reservation system. <strong> Full Stack development </strong> project, designed and developed from scratch using <strong> CSS </strong>, <strong> Bootstrap </strong>, <strong> JavaScript </strong>, <strong> Django </strong> and <strong> PostgreSQL </strong>.",
+                "description": "Hotel management website and reservation system. <strong> Full Stack development </strong> project, designed and developed from scratch using <strong> CSS</strong>, <strong> Bootstrap</strong>, <strong> JavaScript</strong>, <strong> Django</strong> and <strong> PostgreSQL</strong>.",
                 "tech": ["Django", "PostgreSQL", "Bootstrap", "JavaScript", "CSS"],
                 "images": [
                     "../DSH/DSH1.webp",
@@ -69,7 +69,7 @@
             {
                 "cover": "../portada_vwp.webp",
                 "name": "VW Phone",
-                "description": "Mobile phones e-commerce like website built under REST architecture. <strong> Full Stack development </strong> project designed and developed from scratch using <strong> HTML </strong>, <strong> CSS </strong>, <strong> JavaScript </strong>, <strong>Flask</strong> and <strong>MySQL</strong> ",
+                "description": "Mobile phones e-commerce like website built under REST architecture. <strong> Full Stack development </strong> project designed and developed from scratch using <strong> HTML</strong>, <strong> CSS</strong>, <strong> JavaScript</strong>, <strong>Flask</strong> and <strong>MySQL</strong>.",
                 "tech": ["HTML", "CSS", "JavaScript", "Flask", "MySQL"],
                 "images": [
                     "../VW/VW1.webp",
