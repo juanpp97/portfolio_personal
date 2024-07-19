@@ -29,9 +29,7 @@ const i18n = getI18N({ currentLocale })
 <script>
 
 	const sections = document.querySelectorAll('section[data-anchor]');
-	console.log('Number of sections', sections.length)
 	const checkIntersecting = (entries: IntersectionObserverEntry[]) => {
-	console.log('Number of entries', entries.length)
 	const links = document.querySelectorAll(`a[data-anchor]`);
 		entries.forEach((entry) => {
 			if(entry.isIntersecting){

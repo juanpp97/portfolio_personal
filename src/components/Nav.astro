@@ -30,7 +30,7 @@ const i18n = getI18N({ currentLocale });
     </svg>
     <ul class="nav__dropdown hide">
         <a href="#experience" data-anchor><li class="dropdown__link active">{t('nav.experience')}</li></a>
-        <a href="#projects" data-anchor><li class="dropdown__link active">{t('nav.projects')}</li></a>
+        <a href="#projects" data-anchor><li class="dropdown__link">{t('nav.projects')}</li></a>
         <a href="#tech" data-anchor><li class="dropdown__link">{t('nav.tech')}</li></a>
         <a href="#about" data-anchor><li class="dropdown__link">{t('nav.about')}</li></a>
         <a href={i18n.resume_link} download={i18n.download_name}><li class="dropdown__link cv">{t('nav.resume')}</li></a>
@@ -122,11 +122,12 @@ const i18n = getI18N({ currentLocale });
     const icon = document.querySelector(".nav__icon") as HTMLElement;
     const nav = document.querySelector(".header__nav") as HTMLElement;
     const dropdown = document.querySelector(".nav__dropdown") as HTMLElement;
-    const activeLink = document.querySelector(".nav__link.active") as HTMLElement;
 
     icon?.addEventListener("click", toggleVisibility);
 
     function closeDropdown(event: any): void {
+        const activeLink = document.querySelector(".nav__link.active") as HTMLElement;
+
         if (
             dropdown?.classList.contains("hide") ||
             event.target.matches(".header__nav")
@@ -139,6 +140,8 @@ const i18n = getI18N({ currentLocale });
         window.removeEventListener("click", closeDropdown);
     }
     function toggleVisibility(event: any): void {
+        const activeLink = document.querySelector(".nav__link.active") as HTMLElement;
+
     event.stopPropagation();
     if (dropdown?.classList.contains("hide")) {
         dropdown?.classList.remove("hide");
