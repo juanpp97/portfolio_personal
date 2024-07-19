@@ -38,8 +38,14 @@ const i18n = getI18N({ currentLocale })
 
 				links.forEach((link) => {
 					if(link.getAttribute('href') === `#${entry.target.id}`){
+						if(link.children[0]?.classList.contains('dropdown__link')){
+							link.children[0].classList.add('active')
+						}
 						link.classList.add('active')
 					}else{
+						if(link.children[0]?.classList.contains('dropdown__link')){
+							link.children[0].classList.remove('active')
+						}
 						link.classList.remove('active')
 					}
 				})
