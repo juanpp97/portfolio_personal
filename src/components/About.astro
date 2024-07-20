@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import SectionContainer from "@/components/SectionContainer.astro"
+import image from "@/assets/yo.jpg"
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const content = getI18N({ currentLocale })["about"];
+import DOMPurify from 'isomorphic-dompurify';
+
+---
+
+
+<SectionContainer id="about">
+    <h1 class="heading">{content.title}</h1>
+    <article class="detail">
+        <div class="content">
+            <p set:html={DOMPurify.sanitize(content.p1)}></p>
+            <p set:html={DOMPurify.sanitize(content.p2)}></p>
+            <p set:html={DOMPurify.sanitize(content.p3)}></p>
+        </div>
+        <picture>
+            <Image
+            src={image}
+            alt="Juan P. Peñaloza"
+            class:list={["imagen"]}
+            loading="lazy"
+        />
+        </picture>
+    </article>
+</SectionContainer>
+<style>
+    .detail {
+        display: flex;
+        align-items: stretch; 
+        justify-content: space-around;
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+    
+    .content {
+        max-width: 70ch;
+        flex: 1; 
+        line-height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .imagen {
+        max-height: 300px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (width < 800px) {
+        .detail {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+        
+        .imagen {
+            max-height: 250px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .content {
+            height: auto; 
+        }
+    }
+</style>

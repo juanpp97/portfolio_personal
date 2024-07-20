@@ -106,5 +106,12 @@
     "techs": {
         "title": "Technologies",
         "detail": ["Python", "Django", "Flask", "ReactJS", "JavaScript", "HTML", "CSS", "Bootstrap", "PostgreSQL", "MySQL"]
+    },
+    "about":{
+        "title": "About me",
+        "p1": "Hi, my name is Juan Pablo. My interest on coding dates from when I was 15 years old and coded as a hobbie. That, combined with my desire to understand how devices around us work, led me to pursue a bachelor in <strong>electronic engineering</strong>. Once I finished, I decided to <strong>specialize in backend development</strong>",
+        "p2": "I'm currently working as a <strong>assistant professor in the Universidad Nacional de San Luis</strong> on subjects that combine my interest in sharing knowledge with my passion for programming, encouragiing me to <strong>improve continuously</strong>.",
+        "p3": "I have taken part in <strong>innovative competitions and projects</strong> that have allowed me to apply my knowledge in solving real problems.<strong>I have experience in the development of web and mobile aplications for different purposes,<strong> always focusing on obtaning an optimal performance</strong>."
+
     }
 }

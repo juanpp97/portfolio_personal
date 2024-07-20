@@ -5,6 +5,7 @@ import Hero from '@/components/Hero.astro'
 import Experience from '@/components/Experience.astro';
 import ProjectsContainer from '@/components/ProjectsContainer.astro';
 import Tech from '@/components/Tech.astro';
+import About from '@/components/About.astro';
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -17,6 +18,7 @@ const i18n = getI18N({ currentLocale })
 		<Experience/>
 	<ProjectsContainer/>
 		<Tech/>
+		<About/>
 	</main>
 </Layout>
 <style>
@@ -25,6 +27,7 @@ const i18n = getI18N({ currentLocale })
 		min-height: 100vh;
 		position: relative;
 	}	
+
 </style>
 <script>
 
